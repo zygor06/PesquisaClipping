@@ -6,6 +6,7 @@ var config = {
     storageBucket: "pesquisaclipping-8ac6a.appspot.com",
     messagingSenderId: "933174562993"
 };
+
 firebase.initializeApp(config);
 
 firebase.database().ref('pesquisas').once('value').then(function(snapshot) {
@@ -15,37 +16,38 @@ firebase.database().ref('pesquisas').once('value').then(function(snapshot) {
 
     for (var key in seguranca) {
 
-        var id = key;
+        var id = "pesquisas_seguranca";
+        var idPesquisa = "seguranca_" + key;
         var checked = (seguranca[key].check == true) ? "checked" : "";
         var termos = seguranca[key].termos;
 
-        var str =  '<div class="input-group pd-20" id="seguranca_'+id+'">'+
-                '   <span class="input-group-addon"><input type="checkbox" '+ checked +'></span>'+
-                '   <input type="text" class="form-control" value="'+ termos +'" readonly>'+
-                '   <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>'+
-                '</div>';
+        addViewPesquisa(id, idPesquisa, checked, termos);
 
-        var pesquisa_seguranca = document.getElementById('pesquisas_seguranca');
-        pesquisa_seguranca.insertAdjacentHTML('afterbegin', str);
     }
 
     for (var key in defesa) {
 
-        var id = key;
+        var id = "pesquisas_defesa";
+        var idPesquisa = "defesa_" + key;
         var checked = (defesa[key].check == true) ? "checked" : "";
         var termos = defesa[key].termos;
 
-        var str =  '<div class="input-group pd-20" id="defesa_'+id+'">'+
-            '   <span class="input-group-addon"><input type="checkbox" '+ checked +'></span>'+
-            '   <input type="text" class="form-control" value="'+ termos +'" readonly>'+
-            '   <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>'+
-            '</div>';
-
-        var pesquisa_defesa = document.getElementById('pesquisas_defesa');
-        pesquisa_defesa.insertAdjacentHTML('afterbegin', str);
+        addViewPesquisa(id, idPesquisa, checked, termos);
     }
 
 });
+
+function addViewPesquisa(id, idPesquisa, checked, termos){
+
+    var str =  '<div class="input-group pd-20">'+
+        '   <span class="input-group-addon"><input type="checkbox" '+ checked +'></span>'+
+        '   <input id="input_'+idPesquisa+'" type="text" class="form-control" value="'+ termos +'" readonly>'+
+        '   <button id="btn_'+ idPesquisa +'" type="submit" class="btn btn-primary input-group-addon" onclick="edit(\''+idPesquisa+'\')">Editar</button>'+
+        '</div>';
+
+    var pesquisa = document.getElementById(id);
+    pesquisa.insertAdjacentHTML('afterbegin', str);
+}
 
 
 function escreverNovaPesquisa(uid, username, picture, title, body) {
