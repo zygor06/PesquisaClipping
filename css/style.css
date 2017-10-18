@@ -1,0 +1,58 @@
+body {
+	padding-top: 5rem;
+  	font-family: 'Roboto', sans-serif;
+}
+
+.col{
+	padding: 0px;
+	margin: 1px;
+}
+
+.pd-20{
+	padding-bottom: 10px;
+}
+
+.title{
+	color:white;
+	margin: 0px;
+	font-family: 'arial';
+	text-align: center;
+	font-size: 15pt;
+	height: 60px;
+	line-height: 60px;
+}
+
+.title-seguranca{	
+	background-color: #1f752a;
+}
+
+.title-defesa{
+	background-color: #1659bf;
+}
+
+.title-seguranca h1{
+	vertical-align: middle;
+}
+
+.defesa {
+	margin: 0px;
+	background-color:#c2daff;
+}
+
+.seguranca{
+	margin: 0px;
+	background-color:#caffd1;
+}
+
+.pesquisar{
+	color:white;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+}
+
+.conteudo{
+	padding: 15px;
+	color:#333333;
+	font-weight: 400;
+}
