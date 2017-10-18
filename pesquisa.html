@@ -31,34 +31,18 @@
             	</div>
             </div>
             <div class="row">
-            	<div class="col defesa conteudo">
-        		   	<div class="input-group pd-20">
-                        <span class="input-group-addon"><input type="checkbox"></span>
-                        <input type="text" class="form-control" value="Força Aérea Nacional" readonly>
-                        <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>
-                    </div> 
-                    <div class="input-group pd-20">
-                        <span class="input-group-addon"><input type="checkbox"></span>
-                        <input type="text" class="form-control" value="Força Aérea Nacional" readonly>
-                        <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>
-                    </div> 
-                    <div class="input-group pd-20">
-                        <span class="input-group-addon"><input type="checkbox"></span>
-                        <input type="text" class="form-control" value="Força Aérea Nacional" readonly>
-                        <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>
-                    </div> 
+            	<div class="col defesa conteudo" id="pesquisas_defesa">
                     <hr>
                     <div class="pd-20">
-                        <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Adicionar Pesquisa</button>
+                        <button id="adicionar_pesquisa_defesa" type="submit" class="btn btn-primary input-group-addon">Adicionar Pesquisa</button>
                     </div> 		
             	</div>
-            	<div class="col seguranca conteudo">
-            		 <div class="input-group">
-                        <span class="input-group-addon"><input type="checkbox"></span>
-                        <input type="text" class="form-control" value="Força Aérea Nacional" readonly>
-                        <button id="_btn_1" type="submit" class="btn btn-primary input-group-addon">Editar</button>
-                    </div> 
-            	</div>
+            	<div class="col seguranca conteudo" id="pesquisas_seguranca">
+                    <hr>
+                    <div class="pd-20">
+                        <button id="adicionar_pesquisa_seguranca" type="submit" class="btn btn-primary input-group-addon">Adicionar Pesquisa</button>
+                    </div>
+                </div>
             </div>
             <a href="#">
                 <div class="row">
@@ -78,18 +62,7 @@
         <script src="js/popper.js"></script>
         <script src="js/bootstrap.min.js"></script>
         <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
-		<script>
-		  // Initialize Firebase
-		  var config = {
-		    apiKey: "AIzaSyAmVwuuyrGJgWWkY5h03kxfGtKKNQclpuM",
-		    authDomain: "pesquisaclipping-8ac6a.firebaseapp.com",
-		    databaseURL: "https://pesquisaclipping-8ac6a.firebaseio.com",
-		    projectId: "pesquisaclipping-8ac6a",
-		    storageBucket: "pesquisaclipping-8ac6a.appspot.com",
-		    messagingSenderId: "933174562993"
-		  };
-		  firebase.initializeApp(config);
-		</script>
+        <script type="text/javascript" src="js/database-handler.js"></script>
 		<script type="text/javascript" src="js/script.js"></script>
     </body>
     <span class="gr__tooltip"><span class="gr__tooltip-content"></span><i class="gr__tooltip-logo"></i><span class="gr__triangle"></span></span>

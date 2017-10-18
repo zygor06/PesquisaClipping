@@ -1,0 +1,23 @@
+{
+  "pesquisas" : {
+    "seguranca":{
+      "1":{
+        "checkd":true,
+        "termos":"sjasdja sja s",
+        "tempo": 1
+      },
+      "2":{
+        "checked":true,
+        "termos":"sjasdja sja s",
+        "tempo": 1
+      }
+    },
+    "defesa":{
+      "1":{
+        "checked":true,
+        "termos":"sjasdja sja s",
+        "tempo": 1
+      }
+    }
+  }
+}
